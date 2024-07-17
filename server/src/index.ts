@@ -2,12 +2,14 @@
 import express, { Express } from "express";
 import mongoose from "mongoose";
 import financialRecordRouter from "./routes/financial-records"
+import cors from "cors";
 
 // disini tipe data express
 const app: Express = express();
 const port = process.env.PORT || 3001;
 
 app.use(express.json());
+app.use(cors());
 
 // config mongo db, ini diambil dari connect personal tracker
 const mongoURI: string =
