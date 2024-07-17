@@ -21,10 +21,10 @@ const financialRecordSchema = new mongoose.Schema<FinancialRecord>({
 });
 
 // disini dia ngebuat model, nama table nya FinancialRecord, isi columnya financialRecordSchema
-const financialRecordModel = mongoose.model<FinancialRecord>(
+const FinancialRecordModel = mongoose.model<FinancialRecord>(
   "FinancialRecord",
   financialRecordSchema
 );
 
 
-export default financialRecordModel
+export default FinancialRecordModel
