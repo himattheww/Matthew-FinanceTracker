@@ -1,54 +1,11 @@
-/* src/LoginPage.css */
 .auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
-  
-  .cl-sign-in {
-    background: white;
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .cl-sign-in-header {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .cl-sign-in-buttons {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 1rem;
-  }
-  
-  .cl-sign-in-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cl-sign-in-form input {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-  }
-  
-  .cl-sign-in-form button {
-    background: #4e54c8;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .cl-sign-in-form button:hover {
-    background: #8f94fb;
-  }
-  
+    width: 100vw; /* Make sure it covers the full width */
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    position: relative; /* Ensure relative positioning context */
+}

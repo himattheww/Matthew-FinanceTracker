@@ -4,12 +4,10 @@ import { Dashboard } from "./pages/dashboard";
 import { Auth } from "./pages/auth";
 import { FinancialRecordsProvider } from "./contexts/financial-record-context";
 import { SignedIn, SignedOut } from "@clerk/clerk-react";
-import Navbar from "./pages/components/Navbar";
 
 function App() {
   return (
     <Router>
-      <Navbar />
       <div className="app-container">
         <Routes>
           <Route
