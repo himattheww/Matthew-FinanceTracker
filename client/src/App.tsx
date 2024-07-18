@@ -4,17 +4,20 @@ import { Dashboard } from "./pages/dashboard";
 import { Auth } from "./pages/auth";
 import { FinancialRecordsProvider } from "./contexts/financial-record-context";
 import { SignedIn, SignedOut } from "@clerk/clerk-react";
+import money from "./pages/auth/money.jpg";
 
 function App() {
   return (
     <Router>
-      <div className="app-container">
+      <div className="app-container" style={{ backgroundImage: `url(${money})` }}>
         <Routes>
           <Route
             path="/"
             element={
               <SignedOut>
-                <Auth />
+                <div className="route-container">
+                  <Auth />
+                </div>
               </SignedOut>
             }
           />
@@ -23,7 +26,9 @@ function App() {
             element={
               <SignedIn>
                 <FinancialRecordsProvider>
-                  <Dashboard />
+                  <div className="route-container dashboard-container">
+                    <Dashboard />
+                  </div>
                 </FinancialRecordsProvider>
               </SignedIn>
             }

@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #1976d2;
+  }
+  
+  .navbar .toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar .title {
+    flex-grow: 1;
+    font-size: 1.25rem;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  .navbar .logo {
+    height: 40px;
+    margin-right: 16px;
+  }
+  
+  .navbar .button {
+    color: white;
+    margin-left: 16px;
+  }
+  
+  .navbar .button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  

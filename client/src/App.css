@@ -6,6 +6,8 @@ html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f7fa;
   color: #333;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .app-container {
@@ -14,48 +16,105 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  position: relative; /* Ensure relative positioning context */
+  justify-content: center; /* Center content vertically */
 }
 
-/* Navbar styles */
-.navbar {
-  background-color: #3498db; /* Blue shade that matches button colors */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  width: 100%;
-  height: 60px;
+/* Add some basic styling for the routes */
+.route-container {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  margin: 20px;
 }
 
-.navbar a {
-  color: white; /* Ensures links are white */
-  text-decoration: none;
-  margin-right: 20px;
+/* Custom scrollbar */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f4f7fa;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+  border: 3px solid #f4f7fa;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Additional styles for the dashboard */
+.dashboard-container {
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
+  margin: 20px;
+}
+
+.dashboard-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.dashboard-container .total-monthly {
+  font-size: 20px;
   font-weight: bold;
-  transition: color 0.3s;
+  color: #1e88e5;
+  margin: 20px 0;
 }
 
-.navbar a:hover {
-  color: #e0e0e0; /* Light grey for hover effect */
+.financial-record-list {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
 }
 
-/* Specific styling for Clerk's UserButton if needed */
-.clerk-user-button {
-  background-color: transparent;
-  border: none;
+.financial-record-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.financial-record-list th, 
+.financial-record-list td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.financial-record-list th {
+  background-color: #f4f4f4;
+}
+
+.financial-record-list tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.financial-record-list tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.financial-record-list .delete-button {
+  background-color: #d9534f;
   color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.clerk-user-button:hover {
-  color: #e0e0e0; /* Consistency in hover effects */
-}
-
-.sign-in-container {
-  margin-top: 300px;
-}
-
-.sign-in-container button {
-  margin: 10px;
+.financial-record-list .delete-button:hover {
+  background-color: #c9302c;
 }

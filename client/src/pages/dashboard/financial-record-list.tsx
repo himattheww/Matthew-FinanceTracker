@@ -3,7 +3,8 @@ import {
   FinancialRecord,
   useFinancialRecords,
 } from "../../contexts/financial-record-context";
-import { useTable, Column, CellProps, Row } from "react-table";
+import { useTable, Column, CellProps } from "react-table";
+import "./Frl.css";
 
 interface EditableCellProps extends CellProps<FinancialRecord> {
   updateRecord: (rowIndex: number, columnId: string, value: any) => void;
@@ -128,8 +129,6 @@ export const FinancialRecordList = () => {
     ],
     [records]
   );
-
-  // dibawah ini dia pake hooks useTable dari react-table
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     useTable({

@@ -1,7 +1,7 @@
 import { useState } from "react";
-// import user dari clerk
 import { useUser } from "@clerk/clerk-react";
 import { useFinancialRecords } from "../../contexts/financial-record-context";
+import "./Frf.css";
 
 export const FinancialRecordForm = () => {
   const [description, setDescription] = useState<string>("");
@@ -40,6 +40,7 @@ export const FinancialRecordForm = () => {
             type="text"
             required
             className="input"
+            placeholder="Enter description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
@@ -51,6 +52,7 @@ export const FinancialRecordForm = () => {
             type="number"
             required
             className="input"
+            placeholder="Enter amount"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
           />
