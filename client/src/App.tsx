@@ -4,6 +4,7 @@ import { Dashboard } from "./pages/dashboard";
 import { Auth } from "./pages/auth";
 import { FinancialRecordsProvider } from "./contexts/financial-record-context";
 import { SignedIn, UserButton } from "@clerk/clerk-react";
+import {dark} from "@clerk/themes"
 
 function App() {
   //  npm create vite
@@ -15,8 +16,8 @@ function App() {
           Dashboard
           </Link>
           <SignedIn>
-            <UserButton/>
-        </SignedIn>
+            <UserButton appearance={{baseTheme: dark}}/>
+          </SignedIn>
         </div>
         <Routes>
           <Route
