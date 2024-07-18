@@ -1,29 +1,17 @@
-import {
-  SignedOut,
-  SignInButton,
-  SignUpButton,
-  UserButton,
-  SignedIn,
-} from "@clerk/clerk-react";
-import {Navigate} from "react-router-dom"
+import React from 'react';
+import { SignedOut, SignIn } from '@clerk/clerk-react';
+import './Auth.css'; // Ensure you have the appropriate styles
 
-export const Auth = () => {
+export const Auth: React.FC = () => {
   return (
-    <div className="sign-in-container">
-        {/* kalau dia di cover di contoh dibawah ini maka dia nunjukin component 
-        ini ketika dia di keadaan yang mengcover , disini case nya ketika signout */}
-        <SignedOut>
-            <SignUpButton mode="modal"/>
-            <SignInButton mode="modal"/>
-        </SignedOut>
-
-        <SignedIn>
-          <Navigate to="/"/>
-        </SignedIn>
-
-        <>
-        </>
-    
+    <div className="auth-container">
+      <SignedOut>
+        <SignIn 
+          path="/"
+          routing="path"
+          afterSignInUrl="/dashboard"
+        />
+      </SignedOut>
     </div>
-  )
+  );
 };
