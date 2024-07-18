@@ -6,9 +6,10 @@ const router = express.Router();
 // route pertama yang dibawah ini kira kira mau dibuat ngapain,
 // di case ini untuk nge querry semua pengeluaran yang sudah dibuat
 // disini param nya user ID, param dibedakan pakai :
-router.get("/getAllByUserID/:userID", async (req: Request, res: Response) => {
+router.get("/getAllByUserID/:userId", async (req: Request, res: Response) => {
   try {
     const userId = req.params.userId;
+    console.log(userId);
     // apa yang mau diambil di find
     const records = await FinancialRecordModel.find({ userID: userId });
     if (records.length === 0) {
